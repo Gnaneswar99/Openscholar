@@ -429,7 +429,7 @@ MIT — see [LICENSE](./LICENSE).
 **Gnaneswar**
 GitHub: [@Gnaneswar99](https://github.com/Gnaneswar99)
 
-If this project helped you or inspired your own, please ⭐️ the repo — it really helps.
+If this project helped you or inspired your own, please ⭐️ the repo, it really helps.
 
 ---
 
