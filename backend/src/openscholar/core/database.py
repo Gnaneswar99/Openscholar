@@ -33,8 +33,8 @@ async def get_db() -> AsyncGenerator[AsyncSession, None]:
 
 
 async def init_db() -> None:
-    from openscholar.models.base import Base
     from openscholar.models import research_job, source, user  # noqa: F401
+    from openscholar.models.base import Base
 
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)

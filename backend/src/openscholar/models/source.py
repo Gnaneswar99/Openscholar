@@ -31,7 +31,7 @@ class Source(Base):
     # Relevance score assigned by the researcher agent (0..1)
     relevance: Mapped[float] = mapped_column(Float, default=0.0)
 
-    job: Mapped["ResearchJob"] = relationship(back_populates="sources")
+    job: Mapped[ResearchJob] = relationship(back_populates="sources")
 
     def __repr__(self) -> str:
         return f"<Source {self.title[:40]!r}>"

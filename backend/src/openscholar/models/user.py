@@ -10,7 +10,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from openscholar.models.base import Base
 
 
-class UserRole(str, enum.Enum):
+class UserRole(enum.StrEnum):
     ADMIN = "admin"
     USER = "user"
 

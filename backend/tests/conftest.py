@@ -15,10 +15,10 @@ os.environ.setdefault("DATABASE_URL", "sqlite+aiosqlite:///:memory:")
 os.environ.setdefault("SECRET_KEY", "test-secret-key-not-for-production")
 os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 
-from httpx import ASGITransport, AsyncClient  # noqa: E402
+from httpx import ASGITransport, AsyncClient
 
-from openscholar.core.database import AsyncSessionLocal, init_db  # noqa: E402
-from openscholar.main import app  # noqa: E402
+from openscholar.core.database import AsyncSessionLocal, init_db
+from openscholar.main import app
 
 
 @pytest.fixture(scope="session")

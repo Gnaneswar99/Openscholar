@@ -5,7 +5,7 @@ from __future__ import annotations
 import enum
 from typing import TYPE_CHECKING
 
-from sqlalchemy import Enum, Float, ForeignKey, Integer, JSON, String, Text
+from sqlalchemy import JSON, Enum, Float, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from openscholar.models.base import Base
@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     from openscholar.models.source import Source
 
 
-class ResearchJobStatus(str, enum.Enum):
+class ResearchJobStatus(enum.StrEnum):
     PENDING = "pending"
     PLANNING = "planning"
     RESEARCHING = "researching"
@@ -57,7 +57,7 @@ class ResearchJob(Base):
     # Error tracking
     error_message: Mapped[str | None] = mapped_column(Text, nullable=True)
 
-    sources: Mapped[list["Source"]] = relationship(
+    sources: Mapped[list[Source]] = relationship(
         back_populates="job",
         cascade="all, delete-orphan",
         lazy="selectin",
