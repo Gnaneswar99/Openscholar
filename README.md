@@ -2,7 +2,7 @@
 
 # 🧠 OpenScholar
 
-### Autonomous multi-agent research platform. Ask any question — get a fully-cited research report in minutes, written by a team of specialized AI agents.
+### Autonomous multi-agent research platform. Ask any question, get a fully-cited research report in minutes, written by a team of specialized AI agents.
 
 [![Backend CI](https://img.shields.io/github/actions/workflow/status/Gnaneswar99/openscholar/backend-ci.yml?branch=main&label=backend&logo=github)](https://github.com/Gnaneswar99/openscholar/actions/workflows/backend-ci.yml)
 [![Frontend CI](https://img.shields.io/github/actions/workflow/status/Gnaneswar99/openscholar/frontend-ci.yml?branch=main&label=frontend&logo=github)](https://github.com/Gnaneswar99/openscholar/actions/workflows/frontend-ci.yml)
