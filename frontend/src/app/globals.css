@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium
+           transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-scholar text-white hover:bg-scholar-dark focus:ring-scholar;
+  }
+  .btn-secondary {
+    @apply btn bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 focus:ring-slate-400;
+  }
+  .input {
+    @apply block w-full rounded-md border border-slate-300 px-3 py-2 text-sm
+           placeholder:text-slate-400 focus:border-scholar focus:outline-none focus:ring-1 focus:ring-scholar;
+  }
+  .card {
+    @apply rounded-lg border border-slate-200 bg-white shadow-sm;
+  }
+}
+
+/* Prose styling for rendered research reports */
+.prose-report h1 { @apply text-2xl font-bold mt-6 mb-3; }
+.prose-report h2 { @apply text-xl font-semibold mt-5 mb-2; }
+.prose-report h3 { @apply text-lg font-semibold mt-4 mb-2; }
+.prose-report p { @apply my-3 leading-relaxed; }
+.prose-report ul { @apply list-disc pl-6 my-3 space-y-1; }
+.prose-report ol { @apply list-decimal pl-6 my-3 space-y-1; }
+.prose-report a { @apply text-scholar hover:underline; }
+.prose-report blockquote { @apply border-l-4 border-slate-300 pl-4 italic my-3; }
+.prose-report code { @apply bg-slate-100 px-1 py-0.5 rounded text-sm; }
+.prose-report pre { @apply bg-slate-900 text-slate-50 p-3 rounded-md overflow-x-auto my-3; }
